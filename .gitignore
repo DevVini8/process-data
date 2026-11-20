@@ -1,0 +1,48 @@
+# ==============================================================================
+# .gitignore - Proteção de Credenciais, Estados do Terraform e Ambientes Locais
+# ==============================================================================
+
+# Variáveis de ambiente e segredos (LGPD & Segurança Fase 2)
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Terraform (IaC)
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+!terraform.tfvars.example
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Python / ETL
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+.pytest_cache/
+*.egg-info/
+
+# Bancos locais temporários e logs
+*.db
+*.sqlite3
+*.log
+
+# Arquivos de sistema e IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+~$*.xlsx
